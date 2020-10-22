@@ -72,6 +72,7 @@ header:hover{
 	list-style:none;
 	position: relative;
 	display: inline-flex;
+	vertical-align: -webkit-baseline-middle;
 }
 
 a.nav-link{
@@ -83,8 +84,8 @@ a.nav-link{
 	text-transform: uppercase;
 	text-align: center;
 	margin: 1.5em;
-    width: 10.7em;
-    height: 3.3em;
+    width: 8.7em;
+    height: 2.8em;
     line-height: 2.8em;
     color: #dddcc2;
     border-radius: 5px;
@@ -311,7 +312,7 @@ p {
 #contact{
 	margin: auto;
 	padding-bottom: 20px;
-	height: 600px;
+	height: 420px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -326,8 +327,10 @@ p {
 	font-family: var(--main-font-family);
 }
 
-form {
-    margin-top: 7.5em;
+.logos {
+	height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
 }
 
 #clr {
