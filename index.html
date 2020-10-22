@@ -4,9 +4,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width">
       <title>Masa Utkovic</title>
-      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link href="public/style.css" rel="stylesheet" type="text/css" />
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-      <link rel="icon" href="https://twemoji.maxcdn.com/2/svg/1f609.svg">
+	  <link rel="icon" href="https://twemoji.maxcdn.com/2/svg/1f609.svg">
+	  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="script.js"></script>
   </head>
@@ -68,22 +69,22 @@
 			<div class="card">
 			    <img class="work-img" src="https://i.imgur.com/q7ameE7.jpg">
 			    <a href="" target="_blank"> <!--Link to project-->
-				<div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
+				<div class="work-content">The Network is a single-page React app where users can sign up, say a little bit about themselves and connect with other users.</div></a>
             </div>
 			<div class="card">
 			    <img class="work-img" src="https://i.imgur.com/T5dEV2X.jpg">
 				<a href="" target="_blank"> <!--Link to project-->
-				<div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
+				<div class="work-content">Memegur is a Vue app where anybody can go and post a meme of their choosing, along with a title and a description. Others can go and look at memes and make thoughtful remarks.</div></a>
             </div>
             <div class="card">
 			    <img class="work-img" src="https://i.imgur.com/YYdO4dQ.jpg">
 				<a href="" target="_blank"> <!--Link to project-->
-				<div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
+				<div class="work-content">Towelday petition is an online petition that visitors can sign in order to demand a new national holiday, 25th May.</div></a>
             </div>
             <div class="card">
 			    <img class="work-img" src="https://i.imgur.com/Wlnzq2b.jpg">
 				<a href="" target="_blank"> <!--Link to project-->
-				<div class="work-content">Lorem ipsum dolor sit amet consectetur.</div></a>
+				<div class="work-content">Plate Check is a React app developed for people diagnosed with IBS. It allows them to scan the barcode of a product and check if it's safe for their consumption.</div></a>
             </div> 
 				  
 		  </div>
@@ -101,15 +102,49 @@
 			  <a href="#" target="_blank"><i class='fab fa-github'></i></a>
 			  <a href="#" target="_blank"><i class='fab fa-linkedin-in'></i></a>
 			  <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-		    </div>
+			</div>
+			<p>Or email me via this form.</p>
 		  </div>
+		  
+		  <form class="gform" method="post" action="https://script.google.com/macros/s/AKfycbxMqZ7cuO7KiYL54vGOc_m7a-Ym-Oou_a2X6W8CJ7DZ4s9QDkmF/exec">
+			<div class="container-contact">
+				<div class="row">
+					<div class="column25">
+						<label for="fname">First Name</label>
+					</div>
+				<div class="column75">
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column25">
+					<label for="email">Email</label>
+				</div>
+				<div class="column75">
+					<input type="email" id="email" name="email" placeholder="name@email.com">
+				</div>
+			</div>
+			<div class="row">
+				<div class="column25">
+					<label for="subject">Messsage</label>
+				</div>
+				<div class="column75">
+					<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<button id="form-button" type="submit" value="Submit">Send</button></a>
+			</div>
+			<div style="display:none" class="thankyou_message">
+				<p>Thank you for contacting me! I will get back to you in the next 24 hours!</p>
+			</div>
+		</form>
+	
 
 	</main>
-		<footer class="copyright">
-			<a href="#" target ="_blank">Made with ❤️ and ☕ by Achal Jhawar</a>
-		</footer>
 
 	  
 </div>
+
 </body>
 </html>
