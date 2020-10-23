@@ -75,8 +75,8 @@ header:hover{
 	vertical-align: -webkit-baseline-middle;
 }
 
-a.nav-link{
-	margin: 2px;
+a.nav-link,
+button {
 	padding: 5px 10px;
 	text-decoration: none;
 	color: var(--main-fonts-color);
@@ -105,7 +105,9 @@ a.nav-link{
 }
 
 .nav-link:before,
-.nav-link:after {
+.nav-link:after,
+button:before,
+button:after {
 	content:'';
     position:absolute;
     top:0;
@@ -120,7 +122,8 @@ a.nav-link{
     transition:400ms ease all;
 }
 
-.nav-link:after{
+.nav-link:after
+button:after {
     right:inherit;
     top:inherit;
     left:0;
@@ -128,14 +131,15 @@ a.nav-link{
 }
 
 .nav-link:hover:before,
-.nav-link:hover:after{
+.nav-link:hover:after,
+button:hover:before,
+button:hover:after {
     width:100%;
     transition:800ms ease all;
 }
 
-.nav-link:hover {
-	/*color: #000000;
-	background: var(--main-decor-color);*/
+.nav-link:hover
+button:hover {
 	color: #ed8d8d;
     background: transparent;
     box-shadow:none;
@@ -254,7 +258,7 @@ strong {
 
 p {
 	font-family: var(--main-font-family);
-	font-size:0.8rem;
+	font-size: 1rem;
 	padding: 10px;
 	color: #ed8d8d;	
 }
