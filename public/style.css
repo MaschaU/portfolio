@@ -100,6 +100,11 @@ button {
     border: none;
 }
 
+button {
+	font-weight: bolder;
+	margin-left: 0;
+}
+
 .active{
 	background: var(--main-decor-color);
 }
@@ -510,6 +515,28 @@ hr {
         padding:20px 20%;
     }
 }
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+	.container-contact {
+		width: 60%;
+	}
+
+	.column25 {
+		width: 35%;
+		margin-left: 55px;
+	}
+
+	textarea, #fname, #email {
+		width: 100%;
+		margin-left: 55px;
+	}
+
+	#email {
+		width: 100%;
+	}
+}
+
+
 @media only screen and (max-width: 1214px) and (min-width: 1000px) {
 	.work{
         padding:20px 12%;
@@ -558,6 +585,67 @@ hr {
 	}	
 	.nav-bar li{
 		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 731px) and (min-width: 411px) {
+	#projects {
+		margin-top: 0;
+	}
+
+	.container-contact {
+		width: 75%;
+	}
+
+	.column25 {
+		width: 35%;
+		margin-left: 35px;
+	}
+
+	textarea, #fname, #email {
+		width: 100%;
+		margin-left: 35px;
+	}
+
+	#email {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 568px) and (min-width: 320px) {
+	h3 {
+		margin-top: 60px;
+	}
+	
+	.intro p {
+		margin-bottom: 0;
+	}
+
+	#projects {
+		margin-top: 30px;
+	}
+
+	.card {
+		width: 300px;
+	}
+
+
+	.container-contact {
+		width: 75%;
+	}
+
+	.column25 {
+		width: 35%;
+		margin-left: 35px;
+	}
+
+	textarea, #fname, #email {
+		width: 100%;
+		margin-left: 35px;
+	}
+
+	#email {
+		width: 100%;
 	}
 }
 
