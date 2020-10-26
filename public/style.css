@@ -1,4 +1,4 @@
-:root{
+:root {
 	--main-background: #0b0c0f;
 	--main-fonts-color: #ed8d8d;
 	--main-decor-color:rgba(241, 71, 148, 0.616);
@@ -6,19 +6,19 @@
 	--main-font-family: 'Montserrat', sans-serif;
 }
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 }
 
-#particles {
+/*#particles {
     width: 100%;
     height: 100%;
     background-color: #010101;
     position: fixed;
     z-index: -2;
-}
+}*/
 
 img {
 	height: 300px;
@@ -27,7 +27,7 @@ img {
 	object-fit: cover;
 }
 
-main{
+main {
 	padding: 0;
 	width: 100%;
 	height: 100%;
@@ -38,7 +38,7 @@ main{
        header
 ──────────────────*/
 
-header{
+header {
 	margin: 0 auto;
 	width: 100%;
 	height: 70px;
@@ -51,22 +51,23 @@ header{
 	transition: 0.3s;
 	z-index: 5;
 }
-.nav-show{
+
+.nav-show {
 	opacity: 0;
 }
 
-header:hover{
+header:hover {
 	opacity: 1;
 	background: var(--main-header-background);
 }
 
-.logo img{
+.logo img {
 	padding-top: 5px;
 	height: 50px;
 	cursor: pointer;
 }
 
-.nav-bar{
+.nav-bar {
 	list-style:none;
 	position: relative;
 	display: inline-flex;
@@ -103,7 +104,7 @@ button {
 	margin-left: 0;
 }
 
-.active{
+.active {
 	background: var(--main-decor-color);
 }
 
@@ -152,7 +153,7 @@ button:hover {
        home
 ──────────────────*/
 
-#home{ 	
+#home { 	
 	margin: auto;
 	height: 100%;
 	color: var(--main-fonts-color);
@@ -162,7 +163,7 @@ button:hover {
 	justify-content: space-evenly;
 }
 
-#home .filter{
+#home .filter {
 	background: url('https://i.imgur.com/kTmpHKo.jpg') no-repeat;
 	background-size: cover;
 	background-position:center;
@@ -182,7 +183,7 @@ button:hover {
 	padding: 20px;
 }
 
-.intro  p{
+.intro p {
     margin: 20px;
 	font-size:1.5em;
 	font-family: var(--main-font-family);
@@ -210,7 +211,7 @@ strong {
     social media
 ──────────────────*/
 
-.social-media{
+.social-media {
 	padding: 10px;
 	display: flex;
 	position: center;
@@ -226,7 +227,7 @@ strong {
 	color: var(--main-fonts-color);
 }
 
-.social-media a i{
+.social-media a i {
 	cursor: pointer;
 }
 
@@ -239,7 +240,7 @@ strong {
       projects
 ──────────────────*/
 
-#projects{
+#projects {
 	margin-top:100px;
     height: 100%;
 	display: flex;
@@ -249,10 +250,10 @@ strong {
 	text-align:center;
 	color: var(--main-fonts-color);
 }
-#projects h3{
+#projects h3 {
     padding-top: 70px;
 }
-#projects p{
+#projects p {
 	font-family: var(--main-font-family);
 	font-size:1.2rem;
 	padding: 10px;
@@ -266,7 +267,7 @@ p {
 	color: #ed8d8d;	
 }
 
-.work{
+.work {
 	display: flex; 
 	flex: 1;
     flex-wrap: wrap;
@@ -275,7 +276,7 @@ p {
 	padding: 20px;
 }
 
-.card{
+.card {
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
@@ -285,13 +286,13 @@ p {
     background:var(--main-decor-color);
 }
 
-.card img{
+.card img { 
 	width: 100%;
 	height:70%;
 	border-radius:10px 10px 0px 0px;
 }
 
-.card .work-content{
+.card .work-content {
 	text-align: center;
 	padding: 10px 5px;
 	font-size: 1rem;
@@ -300,15 +301,15 @@ p {
 	cursor: pointer;
 }
 
-.card a{
+.card a {
 	text-decoration: none;
 }
 
-.card .work-content:hover{
+.card .work-content:hover {
     color:#202020;
 }
 
-.card:hover{
+.card:hover {
 	box-shadow: 0 0 1.5rem gray;
 }
 
@@ -316,7 +317,7 @@ p {
       Contact
 ──────────────────*/
 
-#contact{
+#contact {
 	margin: auto;
 	padding-bottom: 20px;
 	height: 420px;
@@ -327,7 +328,7 @@ p {
 	color: var(--main-fonts-color);
 }
 	
-#contact p{
+#contact p {
 	padding:10px;
 	text-align:center;
 	font-size:1.2rem;
@@ -345,7 +346,7 @@ p {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
   
-aside{
+aside {
     padding-left: 3.25em;
     text-align:center;
 }
@@ -425,16 +426,6 @@ footer {
 	text-align: center;
 }
 
-.copyright a{
-	color: #fff;
-	font-size: 1rem;
-	letter-spacing: 1px;
-    text-decoration: none;
-}
-
-.copyright a:hover{
-	color: var(--main-decor-color);
-}
 
 /*──── hr ─────*/
 
@@ -452,16 +443,16 @@ hr {
 /*────────────────── 
      Scrollbar
 ──────────────────*/
-::-webkit-Scrollbar{
+::-webkit-Scrollbar {
     width: 5px; 
 	background: rgba(5,5,5,1);
 }
-::-webkit-Scrollbar-thumb{
+::-webkit-Scrollbar-thumb {
 	border-radius: 10px;
 	background: var(--main-decor-color);
 	box-shadow: inset 0 0 20px var(--main-decor-color);
 }
-::-webkit-Scrollbar-track{
+::-webkit-Scrollbar-track {
 	margin-top: 80px;
 	border-radius: 10px;
 }
@@ -473,7 +464,7 @@ hr {
 	display: none;
 }
 
-.hamburger div{
+.hamburger div {
 	width: 30px;
 	height: 3px;
 	background: #dbdbdb;
@@ -481,19 +472,19 @@ hr {
 	transition:all 0.3s ease;
 }
 
-.toggle .line1{
+.toggle .line1 {
 	transform: rotate(-45deg) translate(-5px,6px);
 }
 
-.toggle .line2{
+.toggle .line2 {
 	opacity: 0;
 }
 
-.toggle .line3{
+.toggle .line3 {
 	transform: rotate(45deg) translate(-5px,-6px);
 }
 
-@keyframes navLinkFade{
+@keyframes navLinkFade {
 	from{
 		opacity:0;
 		transform: translatex(50px);
@@ -534,7 +525,6 @@ hr {
 	}
 }
 
-
 @media only screen and (max-width: 1214px) and (min-width: 1000px) {
 	.work{
         padding:20px 12%;
@@ -543,8 +533,7 @@ hr {
 
 
 @media only screen and (max-width: 500px) {
-
-	#home, #projects, #contact{
+  	   #home, #projects, #contact{
         overflow-x: hidden;
 	}
 	header{
@@ -613,6 +602,7 @@ hr {
 @media only screen and (max-width: 568px) and (min-width: 320px) {
 	h3 {
 		margin-top: 60px;
+		padding-top: 15px;
 	}
 	
 	.intro p {
@@ -644,6 +634,24 @@ hr {
 
 	#email {
 		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 823px) and (min-width: 411px) {
+	h3 {
+		padding-top: 0;
+	}
+}
+
+@media only screen and (max-width: 667px) and (min-width: 375px) {
+	h3 {
+		padding-top: 40px;
+	}
+}
+
+@media only screen and (max-width: 736px) and (min-width: 414px) {
+	h3 {
+		padding-top: 40px;
 	}
 }
 
