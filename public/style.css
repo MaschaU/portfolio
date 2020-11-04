@@ -12,14 +12,6 @@
 	scroll-behavior: smooth;
 }
 
-/*#particles {
-    width: 100%;
-    height: 100%;
-    background-color: #010101;
-    position: fixed;
-    z-index: -2;
-}*/
-
 img {
 	height: 300px;
 	width: 300px;
@@ -476,11 +468,12 @@ hr {
 }
 
 @keyframes navLinkFade {
-	from{
+	from {
 		opacity:0;
 		transform: translatex(50px);
 	}
-	to{
+
+	to {
 		opacity: 1;
 		transform:translatex(0px);
 	}
@@ -491,7 +484,7 @@ hr {
 ──────────────────*/
 
 @media only screen and (max-width: 1484px) and (min-width: 1214px) {
-	.work{
+	.work {
         padding:20px 20%;
     }
 }
@@ -524,21 +517,25 @@ hr {
 
 
 @media only screen and (max-width: 500px) {
-  	   #home, #projects, #contact{
+  	   #home, #projects, #contact {
         overflow-x: hidden;
 	}
-	header{
+
+	header {
 		background-color: var(--main-header-background);
 	}
-	.logo{
+
+	.logo {
 		position:absolute;
 		top: 2px;
 		left: 30px;
 	}
-	.nav-show{
+
+	.nav-show {
 		opacity: 1;
-	}	 
-	.nav-bar{
+	}	
+
+	.nav-bar {
 		position:fixed;
 		top: 0px;
 		right:0;
@@ -553,15 +550,17 @@ hr {
 		transition: transform 0.5s ease-in;
 		z-index: -1;
 	}
-	.hamburger{
+
+	.hamburger {
 		position:absolute;
 		top: 17px;
 		right: 25%;
 		display: block;
 		cursor:pointer;
 		z-index: 5;
-	}	
-	.nav-bar li{
+	}
+
+	.nav-bar li {
 		opacity:0;
 	}
 }
@@ -648,4 +647,10 @@ hr {
 
 .nav-active{
 	transform:translatex(0%);
+}
+
+@media only screen and (max-width: 740px) and (min-width: 360px) {
+	.thankyou_message {
+        height: 4em;
+    }
 }
