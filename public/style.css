@@ -89,7 +89,7 @@ button {
     color: #dddcc2;
     border-radius: 5px;
     padding: 0;
-    font-weight: 500;
+    font-weight: 900;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -296,7 +296,7 @@ p {
 	text-align: center;
 	padding: 10px 5px;
 	font-size: 1rem;
-	color: var(--main-fonts-color);
+	color: #dddcc2;
 	font-family: var(--main-font-family);
 	cursor: pointer;
 }
@@ -306,7 +306,7 @@ p {
 }
 
 .card .work-content:hover {
-    color:#202020;
+    color:#faf8db;
 }
 
 .card:hover {
@@ -333,6 +333,14 @@ p {
 	text-align:center;
 	font-size:1.2rem;
 	font-family: var(--main-font-family);
+	color: #dddcc2;
+}
+
+#contact-btn {
+	border: 0.5px solid #dddcc2;
+	border-radius: 0;
+	border-left: transparent;
+	border-right: transparent;
 }
 
 .logos {
@@ -378,7 +386,8 @@ label {
     background-color: #282e34;
     padding: 1.25em;
     width:33%;
-    margin: auto;
+	margin: auto;
+	border-bottom: 50px solid var(--main-background);
 }
 
 #form-button {
@@ -408,24 +417,6 @@ label {
     display: table;
     clear: both;
 }
-
-/*────────────────── 
-       footer
-──────────────────*/
-
-footer {
-	width: 100%;
-	height: 100%;
-    background-color: var(--main-header-background);
-}
-
-.copyright {
-	color: #fff;
-	font-size: 1.2rem;
-	line-height: 40px;
-	text-align: center;
-}
-
 
 /*──── hr ─────*/
 
