@@ -4,6 +4,7 @@
   "description": "A personal portfolio page/ template",
   "main": "form-submission-handler.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/MaschaU/portfolio/issues"
   },
-  "homepage": "https://github.com/MaschaU/portfolio#readme"
+  "homepage": "https://github.com/MaschaU/portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
