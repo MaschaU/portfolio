@@ -1,5 +1,5 @@
 const express = require("express");
-// const pino = require("pino-http")();
+const pino = require("pino-http")();
 const fetch = require("node-fetch");
 const app = express();
 const http = require("http").createServer(app);
@@ -7,7 +7,7 @@ const io = require("socket.io")(http);
 
 const { PUBLIC_URL, BOT_TOKEN, PORT = 8080 } = process.env;
 
-// app.use(pino);
+app.use(pino);
 app.use(express.static("./public"));
 
 app.get("/", (req, res) => {
