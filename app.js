@@ -45,5 +45,7 @@ app.listen(PORT, () => {
       console.log("setWebhook response", resJson);
     })
     .catch((err) => console.log("setWebhook", err.message));
-  console.log(`server alive and kickin on ${PORT}!`);
+  console.log(
+    `server alive and kickin on ${PORT}! (${PUBLIC_URL}, ${BOT_TOKEN})`
+  );
 });
