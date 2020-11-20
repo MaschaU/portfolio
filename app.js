@@ -7,7 +7,6 @@ const io = require("socket.io")(http);
 
 const { PUBLIC_URL, BOT_TOKEN, PORT = 8080 } = process.env;
 
-app.use(pino);
 app.use(express.static("./public"));
 
 app.get("/", (req, res) => {
@@ -23,10 +22,12 @@ io.on("connection", (socket) => {
 app.use(express.json());
 
 app.post("/webhook/telegram", (req, res, next) => {
-  console.log(req.body);
+  console.log("telegram webhook", req.body);
   if (outboundSocket) outboundSocket.emit(req.body);
   next();
 });
+
+app.use(pino);
 
 const sendCommand = (commandName, body) => {
   fetch(`https://api.telegram.org/bot${BOT_TOKEN}/${commandName}`, {
@@ -40,6 +41,11 @@ app.listen(PORT, () => {
   // when starting the app, ensure the webhook is setup
   sendCommand("setWebhook", {
     url: `${PUBLIC_URL}/webhook/telegram`,
-  });
+  })
+    .then((res) => res.json())
+    .then((resJson) => {
+      console.log("setWebhook response", resJson);
+    })
+    .catch((err) => console.log("setWebhook", err.message));
   console.log(`server alive and kickin on ${PORT}!`);
 });
