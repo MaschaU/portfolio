@@ -15,15 +15,23 @@ app.get("/", (req, res) => {
 
 let outboundSocket;
 io.on("connection", (socket) => {
-  outboundSocket = socket;
-  console.log("a user connected");
+  console.log("a user connected", socket);
+  if (!outboundSocket) {
+    outboundSocket = socket;
+    // socket.on('message', () => { });
+    socket.on("disconnect", () => {
+      outboundSocket = null;
+    });
+  }
 });
 
 app.use(express.json());
 
 app.post("/webhook/telegram", (req, res, next) => {
   console.log("telegram webhook", req.body);
-  if (outboundSocket) outboundSocket.emit(req.body);
+  if (outboundSocket) {
+    outboundSocket.emit("webhook", req.body);
+  }
   next();
 });
 
