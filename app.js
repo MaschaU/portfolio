@@ -29,20 +29,18 @@ app.post("/webhook/telegram", (req, res, next) => {
 
 app.use(pino);
 
-const sendCommand = (commandName, body) => {
+const sendCommand = (commandName, body) =>
   fetch(`https://api.telegram.org/bot${BOT_TOKEN}/${commandName}`, {
     method: "post",
     body: JSON.stringify(body),
     headers: { "Content-Type": "application/json" },
-  });
-};
+  }).then((res) => res.json());
 
 app.listen(PORT, () => {
   // when starting the app, ensure the webhook is setup
   sendCommand("setWebhook", {
     url: `${PUBLIC_URL}/webhook/telegram`,
   })
-    .then((res) => res.json())
     .then((resJson) => {
       console.log("setWebhook response", resJson);
     })
