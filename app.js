@@ -44,7 +44,7 @@ const sendCommand = (commandName, body) =>
     headers: { "Content-Type": "application/json" },
   }).then((res) => res.json());
 
-app.listen(PORT, () => {
+http.listen(PORT, () => {
   // when starting the app, ensure the webhook is setup
   sendCommand("setWebhook", {
     url: `${PUBLIC_URL}/webhook/telegram`,
