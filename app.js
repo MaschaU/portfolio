@@ -6,6 +6,7 @@ const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
 const { PUBLIC_URL, BOT_TOKEN, PORT = 8080 } = process.env;
+const WEBHOOK_TOKEN = `wh${(Math.random() * 10000000).toFixed()}`;
 
 app.use(express.static("./public"));
 
@@ -27,7 +28,7 @@ io.on("connection", (socket) => {
 
 app.use(express.json());
 
-app.post("/webhook/telegram", (req, res, next) => {
+app.post(`/webhook/telegram/${WEBHOOK_TOKEN}`, (req, res, next) => {
   console.log("telegram webhook", req.body);
   if (outboundSocket) {
     outboundSocket.emit("webhook", req.body);
@@ -47,7 +48,7 @@ const sendCommand = (commandName, body) =>
 http.listen(PORT, () => {
   // when starting the app, ensure the webhook is setup
   sendCommand("setWebhook", {
-    url: `${PUBLIC_URL}/webhook/telegram`,
+    url: `${PUBLIC_URL}/webhook/telegram/${WEBHOOK_TOKEN}`,
   })
     .then((resJson) => {
       console.log("setWebhook response", resJson);
