@@ -8,8 +8,6 @@ const io = require("socket.io")(http);
 const { PUBLIC_URL, BOT_TOKEN, PORT = 8080 } = process.env;
 const WEBHOOK_TOKEN = `wh${(Math.random() * 10000000).toFixed()}`;
 
-app.use(express.static("./public"));
-
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
@@ -37,6 +35,8 @@ app.post(`/webhook/telegram/${WEBHOOK_TOKEN}`, (req, res, next) => {
 });
 
 app.use(pino);
+
+app.use(express.static("./public"));
 
 const sendCommand = (commandName, body) =>
   fetch(`https://api.telegram.org/bot${BOT_TOKEN}/${commandName}`, {
